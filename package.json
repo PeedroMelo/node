@@ -1,0 +1,24 @@
+{
+  "name": "portal_noticias",
+  "version": "1.0.0",
+  "description": "primeiro site em node",
+  "main": "noticias.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vieirapcm/portal_noticias.git"
+  },
+  "author": "Pedro Melo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vieirapcm/portal_noticias/issues"
+  },
+  "homepage": "https://github.com/vieirapcm/portal_noticias#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  }
+}
