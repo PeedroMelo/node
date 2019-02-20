@@ -6,7 +6,22 @@
 		</head>
 	<body>
 
-		<h1>Notícias</h1>
+        <h1>Notícias</h1>
+        
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Título</th>
+            </thead>
+            <tbody>
+                <% for (var i = 0; i < noticias.length; i++) { %>
+                <tr>
+                    <td><%= noticias[i].id %></td>
+                    <td><%= noticias[i].titulo %></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
 
 	</body>
 </html>

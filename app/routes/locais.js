@@ -1,14 +1,11 @@
-var Connection = require('../../config/conn');
+module.exports = function(application) {
 
-module.exports = function(app) {
+    application.get('/locais', function(req, res) {       
 
-    var conn = Connection();
+        var conn = application.config.conn();
+        var locaisModel = application.app.models.locaisModel();
 
-    app.get('/locais', function(req, res) {       
-
-        var sql = 'SELECT id, nome FROM places WHERE ativo = 1'
-
-        conn.query(sql, function(erro, result){
+        locaisModel.getLocais(conn, function(erro, result){
             res.render("locais/locais", {locais: result});
         });
     });
