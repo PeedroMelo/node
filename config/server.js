@@ -10,6 +10,7 @@ application.set("view engine", "ejs");
 application.set('views', './app/views') // Novo caminho de views
 
 // Middlewares
+application.use(express.static('./app/public'));
 application.use(bodyParser.urlencoded({extended: true})); 
 application.use(expressValidator())
 
@@ -18,6 +19,7 @@ consign()
     .include('app/routes')
     .then('config/conn.js')
     .then('app/models')
+    .then('app/controllers')
     .into(application); // Define o caminha da pasta das rotas
 
 module.exports = application;
